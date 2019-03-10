@@ -1,0 +1,2322 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 14px
+	min-width: 320px
+	line-height: 1.65
+	font-family: $default_font
+	position: relative
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	color: $blue
+	transition: color .3s ease
+	&:hover,&:active,&:focus
+		text-decoration: none
+		transition: color .3s ease
+		color: #337ab7
+
+input:focus
+	outline: none
+
+::selection
+	background: $accent
+	color: #000
+
+.input_group
+	position: relative
+
+.icon
+	width: 25px
+	height: 25px
+	display: inline-block
+	vertical-align: bottom
+	margin-right: 5px
+	background-repeat: no-repeat
+	&.dostavka
+		background-image: url("../img/icon_set.png")
+	&.gorod
+		background-image: url("../img/icon_set.png")
+		background-position: -25px 0
+		margin-right: 0
+	&.user
+		background-image: url("../img/icon_set.png")
+		background-position: 0 -23px
+		margin-right: 0
+	&.search_icon
+		background-image: url("../img/icon_set.png")
+		background-position: -25px -25px
+		margin-right: 0
+	&.phone_icon
+		background-image: url("../img/icon_set.png")
+		background-position: 0px -50px
+		margin-right: 0
+		vertical-align: middle
+	&.subscribe_icon
+		background-image: url("../img/icon_set.png")
+		background-position: -25px -50px
+		margin-right: 0
+header
+	&.main_header
+		background-image: url("../img/header_bg.jpg")
+		background-repeat: no-repeat
+		background-size: cover
+		.logo_line
+			padding: 20px 0
+			overflow: auto
+
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog
+	opacity: 0
+
+	-webkit-transition: all 0.2s ease-in-out
+	-moz-transition: all 0.2s ease-in-out
+	-o-transition: all 0.2s ease-in-out
+	transition: all 0.2s ease-in-out
+
+
+
+	-webkit-transform: scale(0.8)
+	-moz-transform: scale(0.8)
+	-ms-transform: scale(0.8)
+	-o-transform: scale(0.8)
+	transform: scale(0.8)
+
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog
+	opacity: 1
+
+	-webkit-transform: scale(1)
+	-moz-transform: scale(1)
+	-ms-transform: scale(1)
+	-o-transform: scale(1)
+	transform: scale(1)
+
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog
+	-webkit-transform: scale(0.8)
+	-moz-transform: scale(0.8)
+	-ms-transform: scale(0.8)
+	-o-transform: scale(0.8)
+	transform: scale(0.8)
+
+	opacity: 0
+
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg
+	opacity: 0
+	-webkit-transition: opacity 0.3s ease-out
+	-moz-transition: opacity 0.3s ease-out
+	-o-transition: opacity 0.3s ease-out
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg
+	opacity: 0
+
+
+
+
+/**
+ * Fade-move animation for second dialog
+ */
+
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog
+	opacity: 0
+	-webkit-transition: all 0.2s ease-out
+	-moz-transition: all 0.2s ease-out
+	-o-transition: all 0.2s ease-out
+	transition: all 0.2s ease-out
+
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg )
+
+
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog
+	opacity: 1
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 )
+	transform: translateY(0) perspective( 600px ) rotateX( 0 )
+
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog
+	opacity: 0
+
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg )
+
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg
+	opacity: 0
+
+	-webkit-transition: opacity 0.3s ease-out
+	-moz-transition: opacity 0.3s ease-out
+	-o-transition: opacity 0.3s ease-out
+	transition: opacity 0.3s ease-out
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg
+	opacity: 0.8
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg
+	opacity: 0
+
+
+.mmenu_btn
+	position: fixed
+	bottom: 40px
+	left: 40px
+	background-color: #FFF
+	padding: 6px 13px
+	border-radius: 3px
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+	transition: all .3s ease
+	opacity: .5
+	z-index: 1000
+	&:hover,&:active,&:focus
+		transition: all .3s ease
+		background-color: $blue
+		color: #fff
+		opacity: 1
+#my_menu
+	.mm-list
+		li
+			&.completed
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					right: 20px
+					top: 46%
+					width: 7px
+					height: 7px
+					border-radius: 50%
+					background-color: #34A853
+			&.active
+				background-color: #1a1a1a
+
+
+.top_bar
+	padding: 18px 0
+	border-bottom: 1px solid #E5E5E5
+	a
+		color: #707070
+		&:hover,&:active,&:focus
+			color: #000
+			text-decoration: underline
+	.top_menu
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-block
+			a
+				position: relative
+				box-sizing: border-box
+				transition: all .3s ease
+				padding: 0 5px
+				&:hover,&:active,&:focus
+					color: #000
+	.delivery
+		text-align: left
+		.dostavka_link
+			color: $accent
+			font-family: $bold_font
+		&:hover,&:active,&:focus
+			text-decoration-color: $accent
+			color: $accent
+	.check_gorod
+		color: #707070
+		text-align: center
+		span
+			margin-right: 3px
+.s-hidden
+  visibility: hidden
+  padding-right: 10px
+.select
+  cursor: pointer
+  display: inline-block
+  position: relative
+.styledSelect
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  padding: 0 5px
+  text-decoration: underline
+  color: #000
+  font-family: $bold_font
+.styledSelect:after
+  content: ""
+  width: 0
+  height: 0
+  border: 5px solid transparent
+  border-color: black transparent transparent transparent
+  position: absolute
+  top: 9px
+  right: 0
+.styledSelect:active, .styledSelect.active
+	text-decoration: none
+.options
+  display: none
+  position: absolute
+  top: 120%
+  right: 0
+  left: 0
+  z-index: 999
+  margin: 0 0
+  padding: 0 0
+  list-style: none
+  border: 1px solid #ccc
+  background-color: white
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+  animation-duration: .2s
+  animation-timing-function: ease-out
+.options li
+  padding: 0 6px
+  margin: 0 0
+  padding: 5px 10px
+  text-align: left
+.options li:hover
+  background-color: #39f
+  color: white
+
+.lk
+	text-align: left
+	span
+		color: #707070
+		margin-right: 5px
+	a
+		color: #000
+		text-decoration: underline
+		font-family: $bold_font
+		&:hover,&:active,&:focus
+			text-decoration: none
+
+
+.brand
+	a
+		display: inline-block
+	.slogan
+		display: block
+		color: #707070
+		margin-left: 80px
+		margin-top: -20px
+
+.search
+	margin-top: 15px
+	input
+		display: block
+		width: 100%
+		border-radius: 5px
+		border: 1px solid #EAE9E9
+		padding: 6px 5px
+		box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.19)
+	button
+		background-color: transparent
+		border: none
+		position: absolute
+		right: 0
+		top: 7px
+
+.header_phone
+	text-align: right
+	margin-top: 12px
+	.callback
+		color: #707070
+		text-decoration: underline
+		&:hover,&:active,&:focus
+			text-decoration: none
+	.phone
+		font-size: 34px
+		color: #190F4C
+		font-weight: bold
+		display: inline-block
+		line-height: 40px
+		font-family: $PFDinTextPro-bold
+		letter-spacing: -2px
+
+// .form_callback
+// 	background: white
+// 	padding: 20px 30px
+// 	text-align: left
+// 	max-width: 400px
+// 	margin: 40px auto
+// 	position: relative
+
+.sign_in_form, .form_callback
+	background: white
+	padding: 30px 30px 30px 30px
+	text-align: center
+	max-width: 360px
+	margin: 0 auto
+	position: relative
+	border-radius: 10px
+	h3
+		font-family: $PFDinTextPro-bold
+		text-transform: uppercase
+		font-size: 24px
+		margin: 0 0 30px 0
+		font-weight: normal
+	input
+		background-color: #f8f8f8
+		border: none
+		padding: 10px 15px
+		width: 100%
+		-webkit-border-radius: 20px
+		border-radius: 20px
+		font-family: $PFDinTextPro-bold
+		margin-bottom: 7px
+		height: 43px
+		&::placeholder
+			font-family: $PFDinTextPro-regular
+			color: #a5a5a5
+		&:focus
+			border: 1px solid $accent
+	.restoring
+		display: block
+		color: #6b6b6b
+		text-decoration: underline
+		margin-bottom: 15px
+	.social_sign
+		border-top: 1px solid #DDDDDD
+		border-bottom: 1px solid #DDDDDD
+		margin-top: 30px
+		padding: 30px 0
+		margin-bottom: 30px
+		a
+			display: inline-block
+			width: 56px
+			height: 56px
+			background-color: #3d3d3d
+			color: #fff
+			border-radius: 50%
+			padding-top: 17px
+			margin: 0 5px
+			transition: all .3s ease
+			i
+				font-size: 24px
+			&.facebook
+				background-color: #2C70CD
+			&.vk
+				background-color: #0072BC
+			&.instagram
+				background-color: #7C00BC
+			&:hover,&:active,&:focus
+				background-color: $accent
+				transition: all .3s ease
+	h4
+		font-size: 18px
+		text-transform: uppercase
+		font-family: $PFDinTextPro-bold
+		font-weight: normal
+		margin: 0
+		margin-bottom: 5px
+	#registration
+		h4
+			margin-bottom: 20px
+		.btn
+			margin-top: 10px
+
+
+
+.baner
+	background-image: url("../img/header_baner/slide1.jpg")
+	background-size: cover
+	background-color: #3d3d3d
+	background-repeat: no-repeat
+	height: 725px
+	position: relative
+
+.baner_content
+	position: relative
+	text-align: center
+	color: #fff
+	margin-top: 120px
+	text-align: center
+	z-index: 2
+	&:after
+		content: ''
+		display: block
+		background-image: url("../img/header_baner/slide_boy.png")
+		width: 700px
+		height: 652px
+		position: absolute
+		left: -27px
+		top: -61px
+		z-index: -1
+		background-repeat: no-repeat
+	.baner_title
+		text-transform: uppercase
+		font-family: 'PFDinTextPro-Black', sans-serif
+		font-size: 45px
+		line-height: 53px
+		font-weight: normal
+		margin: 0 0 35px 0
+	.baner_desc
+		font-family: 'Helvetica-light', sans-serif
+		font-size: 16px
+		line-height: 24px
+		margin: 0
+	.baner_btn
+		margin-top: 50px
+		&:hover,&:active,&:focus
+			background-color: $dark_blue
+
+
+
+.btn
+	color: #fff
+	background-color: $accent
+	text-transform: uppercase
+	font-family: $PFDinTextPro-bold
+	border-radius: 5px
+	display: inline-block
+	padding: 8px 36px
+	transition: all .3s ease
+	&:hover,&:active,&:focus
+		background-color: $blue
+		color: #fff
+		transition: all .3s ease
+	&.btn_lite
+		background-color: transparent
+		color: $accent
+		padding: 0
+		text-decoration: underline
+		border-radius: 0
+		&:hover,&:active,&:focus
+			text-decoration: none
+	&.btn_tran
+		background-color: transparent
+		color: $accent
+		border: 2px solid $accent
+		border-radius: 10px
+		&:hover,&:active,&:focus
+			color: #fff
+			background-color: $accent
+button
+	&.btn
+		border: none
+nav
+	&.main_menu
+		background-color: $dark_blue
+		&.fixed_menu
+			position: fixed
+			top: 0
+			width: 100%
+			z-index: 99999
+			box-shadow: 0 0 8px 3px rgba(56, 50, 50, .4)
+		ul
+			padding: 0
+			margin: 0
+			list-style-type: none
+			text-align: center
+			li
+				display: inline-block
+				text-align: center
+				position: relative
+				z-index: 1
+				&.sale
+					margin-left: 15px
+				img
+					display: block
+					margin: 0 auto
+				a
+					display: inline-block
+					padding: 10px 10px
+					transition: background-color .3s ease
+					&:hover,&:active,&:focus
+						transition: background-color .3s ease
+						background-color: $accent
+						color: #000
+						.cart_count
+							color: #fff
+					.cart_count
+						position: absolute
+						background-color: $accent
+						display: inline-block
+						width: 20px
+						height: 20px
+						line-height: 20px
+						text-align: center
+						font-size: 12px
+						border-radius: 50%
+						color: #fff
+				&.sale
+					background-color: $accent
+				&.active
+					background-color: $accent
+		a
+			color: #fff
+
+#mobile_menu
+	li
+		&:hover
+			background-color: $accent
+			color: #000
+		&.active
+			background-color: $accent
+
+.mob_nav
+	vertical-align: middle
+	padding: 5px 0
+	.mob_nav_list
+		float: right
+		li
+			a
+				margin: 0
+				padding: 5px 0
+	.cart_count
+		position: absolute
+		background-color: $accent
+		display: inline-block
+		width: 20px
+		height: 20px
+		line-height: 20px
+		text-align: center
+		font-size: 12px
+		border-radius: 50%
+		color: #fff
+
+.toggle-mnu
+  display: inline-block
+  width: 28px
+  height: 28px
+  margin-top: 12px
+
+  span:after, span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+section
+	&.advantages
+		background-repeat: no-repeat
+		background-position:  center
+		padding: 50px 0 100px 0
+		.adv_boy
+			margin-top: 100px
+		.adv_baner
+		.adv_wrapper
+			position: relative
+			padding-top: 43px
+			display: block
+			&:before
+				content: ''
+				position: absolute
+				right: 9px
+				top: 0
+				width: 975px
+				height: 300px
+				background-image: url("../img/adv_bg.png")
+				background-repeat: no-repeat
+				background-position: 0 0
+				z-index: -1
+			.adv_items
+				text-align: center
+				color: #fff
+				.desc
+					opacity: .7
+					transition: all .3s ease
+				&.low_title
+					h2
+						line-height: 46px
+				a
+					color: #fff
+					display: block
+					transition: all .3s ease
+					&:hover,&:active,&:focus
+						h2
+							text-decoration: none
+							color: $dark_blue
+							transition: all .3s ease
+						.desc
+							opacity: 1
+							transition: all .3s ease
+					img
+						width: 90px
+						height: 80px
+						margin-bottom: 5px
+					h2
+						margin: 0
+						text-decoration: underline
+						font-weight: normal
+						font-family: "PFDinTextPro-Bold", sans-serif
+						font-size: 18px
+						text-transform: uppercase
+						line-height: 23px
+						min-height: 46px
+						margin-bottom: 10px
+					p
+						margin: 0
+						font-size: 16px
+						line-height: 18px
+						padding-left: 20px
+						padding-right: 15px
+		.filter
+			padding: 35px 0 40px 0
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				width: 968px
+				height: 127px
+				background-image: url("../img/filter_bg.png")
+				background-repeat: no-repeat
+				background-position: 0 0
+				z-index: -1
+			span
+				text-transform: uppercase
+				color: #c3b7f5
+				font-size: 16px
+				font-family: 'PFDinTextPro-Bold', sans-serif
+				margin-right: 10px
+			a
+				color: #fff
+				display: inline-block
+				margin-right: 5px
+				text-decoration: underline
+				font-size: 16px
+				&:hover,&:active,&:focus
+					text-decoration: none
+			.engine
+				float: left
+				margin-right: 40px
+	&.advantages_nohome
+		background-image: url("../img/advantages_nohome_bg.png")
+		background-repeat: no-repeat
+		background-position: top
+		background-size:
+		padding: 40px 0 90px 0
+		.adv_wrapper
+			&:before
+				z-index: 1
+			.adv_items
+				position: relative
+				z-index: 2
+.mrtop_item
+	margin-top: -377px
+
+section
+	&.category
+		.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9
+			padding-left: 10px
+			padding-right: 10px
+		.category_item
+			height: 357px
+			position: relative
+			margin-bottom: 20px
+			overflow: hidden
+			&.vertical
+				height: 737px
+				header
+					position: absolute
+					width: 100%
+					padding: 0 35px
+					right: 0
+					text-align: center
+			&.horizontal
+				header
+					position: absolute
+					width: 60%
+					padding: 0 70px
+					right: 0
+					text-align: center
+					top: 95px
+				h1
+					margin-top: 60px
+			a
+				display: block
+				z-index: 2
+				transition: all .3s ease
+				&:before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					background-color: rgba(0,0,0, .5)
+					z-index: 1
+					opacity: 0
+					transition: all .3s ease
+				&:hover,&:active,&:focus
+					&:before
+						opacity: 1
+					h1
+						color: #fff
+						&:before
+							width: 150px
+					img
+						transform: scale(1.1)
+					p
+						color: #fff
+
+			header
+				position: absolute
+				bottom: 40px
+				width: 100%
+			img
+				width: 100%
+				transition: transform 0.50s
+			h1
+				position: relative
+				z-index: 2
+				font-size: 24px
+				text-transform: uppercase
+				font-family: 'PFDinTextPro-Bold', sans-serif
+				font-weight: normal
+				text-align: center
+				&:before
+					content: ''
+					height: 17px
+					position: absolute
+					width: 0px
+					background-image: url("../img/start_line.png")
+					right: 0
+					left: 0
+					background-repeat: no-repeat
+					margin: auto
+					background-size: cover
+					bottom: -20px
+					transition: all .3s ease
+					opacity: .5
+			p
+				position: relative
+				z-index: 2
+				line-height: 18px
+				margin: 0
+
+.checkout, .part_lk
+	background-image: url("../img/checkout_bg.png")
+	background-repeat: no-repeat
+	width: 284px
+	height: 660px
+	padding: 20px 25px 327px 25px
+	color: #fff
+	display: block
+	margin: 0 auto
+	margin-top: 53px
+	h3
+		text-transform: uppercase
+		font-size: 20px
+		font-family: $PFDinTextPro-bold
+		font-weight: normal
+		margin: 0 0 10px 0
+	.checkout_btn
+		background-color: #FFFFFF
+		color: #000
+		&:hover,&:active,&:focus
+			background-color: $accent
+	span
+		display: block
+	.sale_price
+		font-size: 29px
+		font-family: $PFDinTextPro-bold
+		font-weight: normal
+		color: #fff
+		line-height: 34px
+		margin-bottom: 20px
+	.end_price
+		font-size: 46px
+		font-family: $PFDinTextPro-bold
+		font-weight: normal
+		color: #fff
+		line-height: 50px
+		margin-bottom: 40px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		border-bottom: 1px solid #ACA7BF
+		padding-bottom: 20px
+		margin-bottom: 20px
+		margin-top: 30px
+		li
+			margin-bottom: 5px
+			&.active
+				a
+					opacity: 1
+					font-family: $bold_font
+			a
+				color: #fff
+				font-size: 18px
+				opacity: .5
+				transition: all .3s ease
+				padding: 10px 0
+				&:hover,&:active,&:focus
+					opacity: 1
+					transition: all .3s ease
+	.sign_out
+		color: #fff
+		font-size: 18px
+		opacity: .5
+		transition: all .3s ease
+		&:hover,&:active,&:focus
+			opacity: 1
+			transition: all .3s ease
+.product_basket
+	padding-bottom: 50px
+	border-bottom: 1px solid #D2D2D2
+	min-height: 1px
+
+.cart_item
+	border: 1px solid #DBDBDB
+	overflow: hidden
+	position: relative
+	padding: 20px 0
+	margin-bottom: 20px
+	transition: all .5s ease
+	img
+		display: block
+		margin: 0 auto
+	.prod_title
+		font-family: $PFDinTextPro-bold
+		color: #000
+		font-size: 18px
+		line-height: 20px
+	.prod_cat
+		color: #968dbf
+		margin-bottom: 15px
+	.amount
+		background-color: #FAFAFA
+		border-radius: 20px
+		text-align: center
+		display: inline-block
+		-webkit-user-select: none
+		input
+			width: 30px
+			text-align: center
+			border: none
+			background-color: transparent
+			height: 42px
+			font-family: $PFDinTextPro-bold
+		span
+			cursor: pointer
+			color: $accent
+			padding: 5px 15px 5px 15px
+			text-align: center
+	.del_item
+		position: absolute
+		background-color: #EDEDED
+		right: 10px
+		top: 10px
+		width: 40px
+		height: 40px
+		text-align: center
+		line-height: 40px
+		cursor: pointer
+		font-size: 20px
+		border-radius: 50%
+		opacity: .7
+		transition: all .3s ease
+		&:hover
+			opacity: 1
+			transition: all .3s ease
+	.old_price
+		font-size: 21px
+		color: #b4b4b4
+		line-height: 24px
+		font-family: $PFDinTextPro-regular
+		text-decoration: line-through
+		margin-bottom: 10px
+	.price
+		font-size: 40px
+		font-family: $PFDinTextPro-bold
+		line-height: 45px
+		color: #000
+
+
+.product_basket_title
+	font-size: 24px
+	font-family: $PFDinTextPro-bold
+	line-height: 35px
+	font-weight: normal
+	text-transform: uppercase
+	margin-top: 0
+
+.cat_color1
+	color: #511c00
+.cat_color2
+	color: #2b0176
+.cat_color3
+	color: #00255e
+.cat_color4
+	color: #5e1700
+.cat_color5
+	color: #6a3900
+.cat_color6
+	color: #512894
+.cat_color7
+	color: #684c02
+.cat_color8
+	color: #642502
+.cat_color9
+	color: #193a4a
+.cat_color10
+	color: #263357
+.cat_color11
+	color: #20474b
+.cat_color12
+	color: #9c4313
+.cat_color13
+	color: #153a71
+.cat_color14
+	color: #685207
+
+section
+	&.content
+		padding: 98px 0
+		text-align: center
+		.sec_title
+			text-transform: uppercase
+			font-size: 65px
+			color: $accent
+			font-family: "PFDinTextPro-Black", sans-serif
+			font-weight: normal
+			letter-spacing: -5px
+			margin: 0
+			line-height: 65px
+			margin-bottom: 75px
+			span
+				color: #4828A8
+		p
+			font-size: 16px
+			line-height: 18px
+			color: #797979
+			text-align: center
+		.btn
+			margin-top: 65px
+
+section
+	&.gallery
+		overflow: hidden
+		&:hover,&:active,&:focus
+			.owl-nav-castom
+				.customNextBtn
+					right: 20px
+				.customPrevBtn
+					left: 20px
+		position: relative
+		.owl-nav-castom
+			position: absolute
+			z-index: 10
+			width: 100%
+			top: 46%
+			.customNextBtn
+				right: -50px
+			.customPrevBtn
+				left: -50px
+			span
+				position: absolute
+				color: #fff
+				width: 50px
+				height: 50px
+				background-color: #FFF
+				display: inline-block
+				border-radius: 50%
+				cursor: pointer
+				opacity: .5
+				transition: all .3s ease
+				padding-top: 7px
+				text-align: center
+				&:hover,&:active,&:focus
+					opacity: 1
+					transition: all .3s ease
+				i
+					color: $accent
+					font-size: 35px
+
+section
+	&.subscribe
+		padding: 80px 0
+		background-image: url("../img/subscribe_bg.jpg")
+		background-repeat: no-repeat
+		background-size: cover
+		.sec_title
+			color: #000
+			font-family: "PFDinTextPro-Bold", sans-serif
+			font-size: 20px
+			line-height: 13px
+			font-weight: normal
+			text-transform: uppercase
+			margin: 7px 0 7px 0
+		.sec_desc
+			color: #000
+			margin: 0
+		.subscribe_form
+			margin-top: 5px
+			input
+				width: 100%
+				border: none
+				border-radius: 5px
+				padding: 7px 15px
+				box-shadow: 0 8px 35px rgba(148, 148, 148, 0.25)
+				position: relative
+				&:focus
+					border-left: 5px solid $accent
+			button
+				position: absolute
+				right: 0
+				top: 6px
+				background-color: transparent
+				border: none
+		.social_link
+			text-align: center
+			a
+				display: inline-block
+				width: 48px
+				height: 48px
+				background-color: $accent
+				text-align: center
+				border-radius: 50%
+				padding-top: 15px
+				margin: 0 20px
+				transition: all .3s ease
+				&:hover,&:active,&:focus
+					background-color: $dark_blue
+					transition: all .3s ease
+				i
+					color: #fff
+					font-size: 20px
+
+section
+	&.payment_method
+		height: 640px
+		background-image: url("../img/payment_method_bg.png")
+		background-repeat: no-repeat
+		background-position: center
+		margin-top: -28px
+		.payment
+			text-align: center
+			margin-top: 178px
+			.sec_title
+				text-transform: uppercase
+				font-size: 18px
+				font-family: "PFDinTextPro-Bold", sans-serif
+				font-weight: normal
+				margin: 35px 0 15px 0
+				color: #000
+			.sec_desc
+				margin: 0 0 15px 0
+ 				font-size: 16px
+				line-height: 18px
+				color: #8c8c8c
+			.btn
+				margin-top: 5px
+				display: block
+	&.delivery_info
+		min-height: 694px
+		background-image: url("../img/delivery_bg.png")
+		background-repeat: no-repeat
+		background-position: center
+		position: relative
+		z-index: 2
+		.delivery
+			text-align: center
+			margin-top: 150px
+			color: #fff
+			.sec_title
+				text-transform: uppercase
+				font-size: 18px
+				font-family: "PFDinTextPro-Bold", sans-serif
+				font-weight: normal
+				margin: 35px 0 15px 0
+			.sec_desc
+				margin: 0 0 15px 0
+ 				font-size: 16px
+				line-height: 18px
+			.btn
+				margin-top: 5px
+				display: block
+				color: #fff
+	&.service_info
+		min-height: 640px
+		background-image: url("../img/service_bg.png")
+		background-repeat: no-repeat
+		background-position: center
+		margin-top: -49px
+		position: relative
+		z-index: 1
+		.service
+			text-align: center
+			margin-top: 189px
+			color: #000
+			.sec_title
+				text-transform: uppercase
+				font-size: 18px
+				font-family: "PFDinTextPro-Bold", sans-serif
+				font-weight: normal
+				margin: 35px 0 15px 0
+				color: #000
+			.sec_desc
+				margin: 0 0 15px 0
+ 				font-size: 16px
+				line-height: 18px
+				color: #838383
+			.btn
+				margin-top: 5px
+				display: block
+				color: #4828a8
+
+footer
+	background-color: $dark_blue
+	&.homepage
+	color: #9080e0
+	.top_footer
+		padding: 70px 0
+		.foot_title
+			color: #fff
+			font-size: 20px
+			text-transform: uppercase
+			line-height: 15px
+			font-family: "PFDinTextPro-Bold", sans-serif
+			font-weight: normal
+			margin-bottom: 30px
+			margin-top: 20px
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			li
+				margin-bottom: 5px
+				a
+					opacity: .7
+					text-decoration: underline
+					transition: all .3s ease
+					&:hover,&:active,&:focus
+						opacity: 1
+						color: #fff
+		.footer_phone
+			a
+				display: block
+				color: #fff
+				font-size: 20px
+				text-transform: uppercase
+				line-height: 15px
+				font-family: "PFDinTextPro-Bold", sans-serif
+				font-weight: normal
+				margin-top: 19px
+		.footer_mail
+			a
+				display: block
+				margin-top: 7px
+				color: $accent
+				text-decoration: underline
+				&:hover,&:active,&:focus
+					text-decoration: none
+		.footer_soc_link
+			margin: 20px 0
+			a
+				display: inline-block
+				margin-right: 12px
+				i
+					color: #fff
+					font-size: 27px
+					transition: all .3s ease
+				&:hover,&:active,&:focus
+					i
+						color: $accent
+						transition: all .3s ease
+		.foot_logo
+			display: block
+			margin-bottom: 40px
+			img
+		.card_info
+			margin-bottom: 30px
+	.bottom_footer
+		background-color: #fff
+		padding: 20px 0px
+		img
+			display: block
+			margin: 0 auto
+
+.breadcrumbs
+	padding: 28px 0 50px 0
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			font-size: 16px
+			&:after
+				content: "\f105"
+				font: normal normal normal 14px/1 FontAwesome
+				font-size: inherit
+				text-rendering: auto
+				margin: 0 3px
+			&:last-child
+				&:after
+					display: none
+			&.active
+				font-family: $bold_font
+				color: #000
+			a
+				margin-right: 5px
+
+section
+	&.product
+		h1
+			text-align: center
+			font-family: $PFDinTextPro-bold
+			font-size: 66px
+			color: #c6c6c6
+			text-transform: uppercase
+			margin: 0 0 40px 0
+			line-height: 71px
+			font-weight: normal
+		.product_slider
+			margin-top: 70px
+			margin-bottom: 70px
+			.owl-stage-outer
+				overflow: unset
+			.owl-nav-castom
+				position: absolute
+				z-index: 10
+				width: 100%
+				top: 39%
+				.customNextBtn
+					right: -50px
+				.customPrevBtn
+					left: -50px
+				span
+					position: absolute
+					color: #fff
+					width: 50px
+					height: 50px
+					background-color: #FFF
+					display: inline-block
+					border-radius: 50%
+					cursor: pointer
+					opacity: .5
+					transition: all .3s ease
+					padding-top: 7px
+					text-align: center
+					&:hover,&:active,&:focus
+						opacity: 1
+						transition: all .3s ease
+					i
+						color: #000
+						font-size: 35px
+			.product_images
+				.owl-item
+					opacity: 0
+					transform: scale(0.4)
+					&.active
+						opacity: .3
+					&.center
+						transform: scale(1.6)
+						opacity: 1
+		.color_choices
+			border-bottom: 1px solid #BFBFBF
+			padding-bottom: 20px
+			margin-bottom: 40px
+			.color
+				text-transform: uppercase
+				font-family: $PFDinTextPro-bold
+				color: #aaaaaa
+				display: inline-block
+				vertical-align: middle
+			div
+				display: inline-block
+			input
+				display: none
+				&#color_1 + label
+					background-color: #5826E8
+				&#color_2 + label
+					background-color: #E73535
+				&#color_3 + label
+					background-color: #1B1C1E
+				&#color_4 + label
+					background-color: #FE7328
+				&#color_5 + label
+					background-color: #458EEA
+				&#color_6 + label
+					background-color: #F128B6
+				&#color_7 + label
+					background-color: #42E439
+				&:checked + label:after
+					opacity: .5
+					transition: all .5s ease
+			label
+				width: 32px
+				height: 32px
+				display: inline-block
+				border-radius: 10px
+				position: relative
+				z-index: 10
+				background-color: #000
+				vertical-align: middle
+				margin: 0 5px
+				cursor: pointer
+				&:after
+					content: ''
+					width: 40px
+					height: 40px
+					border: 3px solid #8D8D8D
+					opacity: 0
+					border-radius: 12px
+					position: absolute
+					top: -4px
+					right: -4px
+					transition: all .5s ease
+		.price_block, .compare_block
+			margin-bottom: 40px
+			i, a, span
+				vertical-align: middle
+		.price_block
+			.add_fav
+				color: $accent
+				font-size: 30px
+				margin-right: 20px
+				cursor: pointer
+				transition: all .3s ease
+				&:hover,&:active,&:focus
+					transition: all .3s ease
+					color: $dark_blue
+		.price_wrap
+			position: relative
+			display: inline-block
+			margin-left: 30px
+			.price
+				color: #000
+				font-family: $PFDinTextPro-bold
+				font-size: 47px
+				line-height: 47px
+			.old_price
+				position: absolute
+				font-size: 26px
+				color: #b4b4b4
+				text-decoration: line-through
+				top: -30px
+				left: 0
+				line-height: 30px
+		.buy_now
+			vertical-align: middle
+			&:hover,&:active,&:focus
+				background-color: $dark_blue
+			i
+				font-size: 25px
+				margin-right: 5px
+				vertical-align: bottom
+section
+	&.sec_product_descr
+		margin-top: 20px
+		text-align: center
+		color: #fff
+		font-size: 18px
+		// background-image: url("../img/product_descr_bg.jpg")
+		background-size: cover
+		padding: 200px 0
+		.product_descr
+			.sec_title
+				text-transform: uppercase
+				font-family: $PFDinTextPro-bold
+				font-weight: normal
+				font-size: 24px
+section
+	&.product_gallery
+		.controls
+			text-align: center
+			padding: 40px 0
+			button
+				background-color: transparent
+				text-transform: uppercase
+				font-size: 24px
+				border: none
+				text-decoration: underline
+				font-family: $PFDinTextPro-regular
+				color: #868686
+				line-height: 35px
+				&.mixitup-control-active
+					font-family: $PFDinTextPro-bold
+					text-decoration: none
+					font-weight: normal
+					color: #010101
+
+.mix
+
+#toTop
+	position: fixed
+	color: #fff
+	width: 50px
+	height: 50px
+	background-color: #fff
+	box-shadow: 0 0 6px 0px #c3c3c366
+	display: inline-block
+	border-radius: 50%
+	cursor: pointer
+	opacity: 1
+	transition: all .3s ease-in-out
+	padding-top: 7px
+	text-align: center
+	right: -100px
+	bottom: 40px
+	z-index: 99999
+	opacity: .5
+	&:hover
+		opacity: 1
+	&.active
+		right: 40px
+		transition: all .3s ease-in-out
+	i
+		color: #fb7800
+		font-size: 35px
+
+section
+	clear: both
+
+section
+	&.product_engine
+		padding: 141px 0
+		background-image: url("../img/product_descr_bg2.jpg")
+		background-size: cover
+		color: #fff
+		.content
+			text-align: center
+			color: #8c8c8c
+			.sec_title
+				text-transform: uppercase
+				font-family: $PFDinTextPro-bold
+				font-weight: normal
+				font-size: 24px
+				color: #fff
+			ul
+				margin: 0
+				padding: 0
+				list-style-type: none
+				text-align: center
+				li
+					display: inline-block
+					margin: 10px 10px
+					width: 140px
+
+					img
+						display: inline-block
+						margin-bottom: 7px
+					span
+						display: block
+						font-size: 18px
+						line-height: 20px
+						font-family: $PFDinTextPro-bold
+						color: #fff
+						margin-bottom: 5px
+					p
+						margin: 0
+						display: block
+.discount
+	color: #fff
+	background-color: #434ED6
+	text-transform: uppercase
+	font-family: $PFDinTextPro-bold
+	border-radius: 5px
+	display: inline-block
+	padding: 0px 10px
+	transition: all .3s ease
+	font-size: 24px
+	margin-left: 10px
+	font-weight: normal
+
+.sec_title
+	text-transform: uppercase
+	font-family: $PFDinTextPro-bold
+	font-weight: normal
+	font-size: 24px
+	color: #fff
+
+section
+	&.braking_system
+		padding: 141px 0
+		background-image: url("../img/product_descr_bg3.jpg")
+		background-size: cover
+		color: #fff
+		overflow: hidden
+		.content
+			text-align: center
+			margin-top: 200px
+		table
+			margin-top: 25px
+			text-align: left
+			i
+				font-size: 6px
+				vertical-align: middle
+				margin-right: 7px
+			td
+				padding-right: 7px
+			span
+				font-family: $bold_font
+
+section
+	&.weight_size
+		padding: 175px 0
+		background-image: url("../img/product_descr_bg4.jpg")
+		background-size: cover
+		color: #838383
+		overflow: hidden
+		.sec_title
+			color: #000
+		.content
+			text-align: center
+			ul
+				margin: 0
+				padding: 0
+				list-style-type: none
+				text-align: center
+				li
+					display: inline-block
+					margin: 10px 10px
+					width: 140px
+
+					img
+						display: inline-block
+						margin-bottom: 7px
+					span
+						display: block
+						font-size: 18px
+						line-height: 20px
+						font-family: $PFDinTextPro-bold
+						color: #000
+						margin-bottom: 5px
+					p
+						margin: 0
+						display: block
+
+section
+	&.outfit
+		padding: 100px 0
+		background-image: url("../img/product_descr_bg5.jpg")
+		background-size: cover
+		color: #fff
+		overflow: hidden
+		text-align: center
+		.content
+			position: relative
+			.outfit_slider
+				span
+					font-size: 18px
+					line-height: 24px
+					margin-bottom: 15px
+				img
+					width: 300px
+					display: block
+					margin: 0 auto
+				p
+					margin: 0
+					color: #e6bafa
+			.owl-nav
+				position: absolute
+				z-index: 10
+				width: 100%
+				top: 27%
+				.NextBtn
+					right: -50px
+				.PrevBtn
+					left: -50px
+				span
+					position: absolute
+					color: #fff
+					width: 50px
+					height: 50px
+					display: inline-block
+					border-radius: 50%
+					cursor: pointer
+					opacity: .5
+					transition: all .3s ease
+					padding-top: 7px
+					text-align: center
+					&:hover,&:active,&:focus
+						opacity: 1
+						transition: all .3s ease
+					i
+						color: #fff
+						font-size: 35px
+
+.text_center
+	text-align: center
+.text_right
+	text-align: right
+
+section
+	&.specifications
+		padding: 100px 0
+		overflow: hidden
+		.sec_title
+			color: #000
+			text-align: center
+			margin-bottom: 60px
+		table
+			margin-bottom: 50px
+			tr
+				th
+					&:first-child
+						width: 20%
+				td
+					margin-bottom: 15px
+					&:last-child
+						text-align: right
+						color: #000
+						font-family: $bold_font
+			span
+				display: block
+				text-align: left
+				color: #989898
+				text-transform: uppercase
+				font-family: $PFDinTextPro-bold
+				font-weight: normal
+			img
+				width: 49px
+
+section
+	&.advantages_nohome
+		.sec_title
+			color: #000
+			text-align: center
+			margin-bottom: 30px
+			margin-top: 80px
+.prod_item
+	text-align: center
+	border: 1px solid #E5E5E5
+	padding: 80px 10px 40px 10px
+	background-color: #fff
+	position: relative
+	transition: all .3s ease
+	top: 0
+	margin-bottom: 30px
+	&:hover,&:active,&:focus
+		transition: all .3s ease
+		top: -6px
+	&.favorites
+		.add_fav
+			color: $accent
+	img
+		height: 116px
+		transition: all .3s ease
+		margin-bottom: 15px
+	a
+		display: block
+		width: 100%
+		&:hover,&:active,&:focus
+			.prod_title
+				color: $accent
+				transition: all .3s ease
+			img
+				transition: all .3s ease
+				transform: scale(1.1)
+	span
+		display: block
+	.prod_title
+		color: #000
+		font-family: $PFDinTextPro-bold
+		font-weight: normal
+		font-size: 24px
+		line-height: 24px
+		transition: all .3s ease
+		min-height: 48px
+	.prod_desc
+		color: #818181
+		line-height: 18px
+	.prod_line
+		width: 72px
+		height: 1px
+		background-color: #CECECE
+		margin: 20px auto
+	.old_price
+		font-size: 21px
+		color: #b4b4b4
+		line-height: 24px
+		font-family: $PFDinTextPro-regular
+		text-decoration: line-through
+		margin-bottom: 10px
+	.price
+		font-size: 24px
+		font-family: $PFDinTextPro-bold
+		line-height: 24px
+		color: #000
+	.add_fav
+		position: absolute
+		top: 20px
+		right: 15px
+		color: #D2D2D2
+		font-size: 25px
+		cursor: pointer
+		&:hover,&:active,&:focus
+			color: $accent
+	.discount
+		color: #fff
+		background-color: #434ED6
+		position: absolute
+		left: -10px
+		top: 15px
+		text-transform: uppercase
+		font-family: $PFDinTextPro-bold
+		border-radius: 0 5px 5px 0
+		display: inline-block
+		padding: 0px 10px
+		transition: all .3s ease
+		font-size: 24px
+		margin-left: 10px
+		font-weight: normal
+	.btn
+		&.btn_tran
+			font-size: 12px
+			margin-top: 10px
+			margin-bottom: 10px
+
+
+article
+	h1
+		text-align: center
+		font-size: 66px
+		color: #c6c6c6
+		text-transform: uppercase
+		margin: 0 0 20px 0
+		line-height: 71px
+		font-weight: normal
+		font-family: $PFDinTextPro-bold
+	.content
+		margin-bottom: 60px
+		text-align: justify
+		h2
+			color: #000
+			font-family: $PFDinTextPro-bold
+			text-transform: uppercase
+			font-weight: normal
+			font-size: 24px
+			line-height: 35px
+		span
+			color: #9B93C3
+			font-family: $bold_font
+			font-weight: normal
+		h3
+			text-transform: uppercase
+			font-family: $bold_font
+			color: #949494
+			font-size: 18px
+			font-weight: normal
+		b, strong
+			font-family: $bold_font
+			font-weight: normal
+		hr
+			background-color: #BFBFBF
+			height: 1px
+			margin: 20px 0
+		ol, ul
+			margin: 0
+			padding: 0
+			li
+				color: #9B93C3
+			span
+				color: #000
+				font-family: $default_font
+		table
+			font-size: 16px
+			thead
+				border-bottom: 1px solid #C9C9C9
+				th
+					padding: 7px 10px
+			tbody
+				tr
+					cursor: pointer
+					&:hover
+						background-color: #F3F3F3
+					td
+						padding: 7px 10px
+		footer
+			display: block
+			margin-top: 40px
+			background-color: transparent
+			padding: 25px 0
+			margin: 0 15px
+			border-top: 5px solid #9B93C3
+			border-bottom: 5px solid #9B93C3
+			text-align: left
+			h5
+				background-color: transparent
+				color: #9b93c3
+				text-transform: uppercase
+				font-size: 36px
+				line-height: 48px
+				font-family: $PFDinTextPro-bold
+				margin: 0
+				margin-bottom: 20px
+			span
+				color: #6e6e6e
+				font-family: $default_font
+
+
+section
+	&.popular_prod
+		padding: 30px 0 80px 0
+		.sec_title
+			color: #000
+			margin-bottom: 30px
+			margin-top: 0
+
+
+section
+	&.ordering
+		form
+			margin-bottom: 80px
+			.label
+				font-size: 24px
+				text-transform: uppercase
+				font-family: $PFDinTextPro-bold
+				display: block
+				margin-top: 30px
+			label
+				display: block
+				color: #6e6e6e
+				margin-bottom: 7px
+				margin-left: 15px
+				span
+					color: $accent
+			input
+				background-color: #F8F8F8
+				border: none
+				padding: 10px 15px
+				width: 100%
+				border-radius: 20px
+				font-family: $PFDinTextPro-bold
+				margin-bottom: 20px
+				height: 43px
+				&:focus
+					border: 1px solid $accent
+			textarea
+				background-color: #F8F8F8
+				border: none
+				padding: 10px 15px
+				width: 100%
+				border-radius: 5px
+				font-family: $PFDinTextPro-bold
+			.btn
+				margin-top: 50px
+				padding: 8px 12px
+			.select
+				width: 100%
+			.styledSelect
+				background-color: #F8F8F8
+				border: none
+				padding: 10px 15px
+				width: 100%
+				border-radius: 20px
+				font-family: $PFDinTextPro-bold
+				margin-bottom: 20px
+				height: 43px
+				text-decoration: none
+				&:after
+					border-color: $accent transparent transparent transparent
+					top: 20px
+					right: 15px
+			.options
+				top: 187%
+			.city_btn
+				margin-top: 30px
+			.delivery_label
+				margin-top: 25px
+			.delivery
+				span
+					color: #000
+					font-family: $PFDinTextPro-bold
+					&.checeked
+						margin-left: 25px
+						position: relative
+						&:before
+							content: ''
+							display: block
+							width: 22px
+							height: 22px
+							border-radius: 50%
+							position: absolute
+							box-shadow: 0 0 6px 0 #a2a2a2 inset
+							top: -2px
+							left: -31px
+				label
+					background-color: #F8F8F8
+					border-radius: 5px
+					cursor: pointer
+					padding: 15px
+					margin-bottom: 15px
+					.btn
+						margin-top: 5px
+						font-size: 12px
+				input[type="date"], input[type="time"]
+					display: block
+					background-color: #fff
+					text-align: center
+					width: 150px
+					margin-top: 10px
+				input
+					display: none
+					&:checked + label
+						border: 3px solid $accent
+						.checeked
+							&:before
+								background-color: $accent
+								border: 5px solid #fff
+								box-shadow: none
+				ul
+					margin: 0
+					padding: 0
+					list-style-type: none
+					margin-top: 27px
+					li
+						float: left
+						width: 50%
+						span
+							display: block
+
+.lk_content
+	h2
+		font-size: 24px
+		font-family: $PFDinTextPro-bold
+		line-height: 35px
+		font-weight: 400
+		text-transform: uppercase
+		margin-top: 0
+		border-bottom: 1px solid #DFDFDF
+		padding-bottom: 20px
+	form
+		.input_group
+			padding: 35px 0
+			margin-bottom: 25px
+			border-bottom: 1px solid #DFDFDF
+		label
+			display: block
+			color: #6e6e6e
+			margin-bottom: 7px
+			margin-left: 15px
+			span
+				color: $accent
+		input
+			background-color: #f8f8f8
+			border: none
+			padding: 10px 15px
+			width: 100%
+			-webkit-border-radius: 20px
+			border-radius: 20px
+			font-family: $PFDinTextPro-bold
+			margin-bottom: 20px
+			height: 43px
+			&.nolabel
+				margin-top: 29px
+			&::placeholder
+				font-family: $PFDinTextPro-regular
+				color: #a5a5a5
+		.select
+			width: 100%
+			background-color: #f8f8f8
+			border: none
+			padding: 10px 15px
+			width: 100%
+			-webkit-border-radius: 20px
+			border-radius: 20px
+			margin-bottom: 20px
+			height: 43px
+		.styledSelect
+			top: 10px
+			left: 15px
+			text-decoration: none
+			&:after
+				border-color: $accent transparent transparent transparent
+				right: 20px
+			&:focus
+				border: 1px solid $accent
+
+.table_order
+	margin-top: -19px
+	font-size: 18px
+
+	.header
+		padding: 10px 0
+		text-align: left
+		font-weight: normal
+		border-bottom: 1px solid #D0D0D0
+		color: #6e6e6e
+		font-size: 14px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			cursor: pointer
+			padding: 13px 15px
+			font-family: $PFDinTextPro-bold
+			&:hover
+				background-color: #F9F9F9
+			span
+				color: #968dbf
+			&.active
+				background-color: #F9F9F9
+		.order_info
+			font-family: $PFDinTextPro-regular
+			font-size: 16px
+			padding: 40px 0
+			label
+				display: block
+				margin-top: 20px
+				margin-bottom: 7px
+				color: #6e6e6e
+			span
+				font-family: $PFDinTextPro-bold
+			.prod_info_item
+				background-color: #fff
+				border: 1px solid #E1E1E1
+				overflow: hidden
+				margin-top: 15px
+				margin-bottom: 15px
+				img
+					float: left
+					margin-right: 30px
+				.prod_title
+					font-family: $PFDinTextPro-bold
+					color: #000
+					font-size: 18px
+					line-height: 23px
+					padding-top: 25px
+					float: left
+					span
+						display: block
+						font-family: $PFDinTextPro-regular
+				.price
+					text-align: center
+					padding-top: 40px
+					.old_price
+						font-size: 21px
+						color: #b4b4b4
+						line-height: 24px
+						font-family: $PFDinTextPro-regular
+						text-decoration: line-through
+						margin-bottom: 10px
+						margin-right: 10px
+					.new_price
+						font-size: 24px
+						font-family: $PFDinTextPro-bold
+						line-height: 24px
+						color: #000
+	.otmena_zakaza
+		color: $accent
+		font-family: $default_font
+		font-size: 13px
+		display: block
+		&:hover,&:active,&:focus
+			color: $blue
+
+section
+	&.catalog
+		h1
+			text-align: center
+			font-family: $PFDinTextPro-bold
+			font-size: 66px
+			color: #c6c6c6
+			text-transform: uppercase
+			margin: 0 0 24px 0
+			line-height: 71px
+			font-weight: 400
+		.tags
+			text-align: center
+			margin-bottom: 45px
+			a
+				display: inline-block
+				background-color: #E5E3F1
+				color: #000
+				font-family: $bold_font
+				padding: 9px 20px
+				border-radius: 20px
+				margin: 0 7px
+				transition: all .3s ease
+				&:hover,&:active,&:focus
+					background-color: $accent
+					transition: all .3s ease
+		.sorting
+			margin-bottom: 30px
+			.styledSelect
+				color: $accent
+				&:after
+					border-color: $accent transparent transparent transparent
+		.add_prod_btn
+			margin-bottom: 57px
+			margin-top: 30px
+		.paginations
+			margin-bottom: 90px
+			a
+				display: inline-block
+				width: 31px
+				height: 31px
+				text-align: center
+				font-family: $bold_font
+				color: #000
+				font-size: 16px
+				border: 2px solid transparent
+				border-radius: 50%
+				&:hover,&:active,&:focus
+					border-color: #434ED6
+				&.active
+					background-color: #434ED6
+					border-color: #434ED6
+					color: #fff
+			span
+				display: inline-block
+				width: 31px
+				height: 31px
+				text-align: center
+				font-family: $bold_font
+				color: #000
+				font-size: 16px
+				border: 2px solid transparent
+				border-radius: 50%
+				cursor: pointer
+				&:hover,&:active,&:focus
+					color: $accent
+				&.left
+					margin-right: 20px
+				&.right
+					margin-left: 20px
+		aside
+			border: 1px solid #F0F0F0
+			margin-bottom: 20px
+			.sort_item
+				border-bottom: 1px solid #F0F0F0
+				padding: 15px 0
+				overflow: hidden
+			.sort_item
+				padding: 10px 10px 20px 10px
+			.name_sort
+				display: block
+				cursor: pointer
+				padding: 10px 0 10px 46px
+				position: relative
+				&:before
+					content: "\f106"
+					font: normal normal normal 14px/1 FontAwesome
+					font-size: 14px
+					font-size: inherit
+					text-rendering: auto
+					position: absolute
+					left: 19px
+					top: 15px
+				&.active
+					&:before
+						content: "\f107"
+			.sort_cont
+				display: none
+			input[type="text"]
+				background-color: #f8f8f8
+				border: none
+				padding: 10px 15px
+				width: 50%
+				border-radius: 20px
+				height: 43px
+				float: left
+				&:focus
+					border: 1px solid $accent
+			.checkbox
+				display: block
+				cursor: pointer
+				input
+					margin-right: 15px
+					border: 1px solid #ECECEC
+					border-radius: 3px
+		.filtr_btn
+			display: block
+			text-align: center
+
+.open_filter
+	position: absolute
+	top: -5px
+	right: 20px
+	color: $accent
+	font-size: 20px
+
+.mob_filter
+	display: none
+
+@import "media" // Медиа запросы
+
+

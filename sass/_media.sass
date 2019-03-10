@@ -1,0 +1,440 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1400px)
+	.top_menu
+		li
+		  a
+		  	padding: 0 3px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.top_menu
+		text-align: center
+		margin-bottom: 10px!important
+		margin-top: 5px!important
+	.top_bar
+		padding: 0px 0
+	body
+		font-size: 14px
+	.delivery, .lk
+		text-align: center!important
+		margin-bottom: 10px
+		margin-top: 5px
+	.brand
+		img
+			width: 100%
+		.slogan
+			margin: -7px 0 0 0
+			text-align: center
+	.header_phone
+		text-align: center
+		margin-top: 5px
+		.phone
+			font-size: 27px
+			line-height: 30px
+	header
+		&.main_header
+			.logo_line
+				padding: 5px 0
+	.mmenu_btn
+		left: 5px
+		bottom: 5px
+	section
+		&.baner
+			height: 480px
+			background-image: url("../img/mobile_screen/head_slide1.jpg")
+			position: relative
+			&:before
+				content: ''
+				background-color: rgba(0,0,0,.5)
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+			.baner_content
+				margin-top: 0
+				text-align: center
+				margin-top: 80px
+				&:after
+					display: none
+				.baner_title
+					font-size: 24px
+					line-height: 32px
+					font-weight: normal
+	nav.main_menu ul
+		li
+			&.sale
+				&:before
+					height: 30px
+					top: 2px
+			a
+				margin: 7px 0
+	section
+		&.advantages
+			padding: 25px 0 30px 0
+			.filter
+				background-color: #8673D1
+				border-radius: 10px
+				padding: 15px 0 15px 0
+				.engine, .age
+					margin: 0 0 10px 0
+					display: block
+					float: none
+					text-align: center
+				span
+					display: block
+				&:before
+					display: none
+			.adv_wrapper
+				padding-top: 20px
+				.adv_items
+					background-color: $accent
+					border-radius: 10px
+					margin-bottom: 15px
+					padding: 15px 0
+					a
+						img
+							margin: 0
+						h2
+							margin: 0 0 5px 0
+						.desc
+							margin:
+				&:before
+					display: none
+
+	.mrtop_item
+		margin-top: 0
+
+	article
+		h1
+			font-size: 29px
+			line-height: 34px
+		img, iframe
+			width: 100%
+			height: auto
+		h2, h3
+			text-align: center
+		.content
+			footer
+				h5
+					font-size: 16px
+					line-height: 23px
+					text-align: center
+				span
+					display: block
+					text-align: center
+			table
+				width: 100%!important
+				font-size: 9px
+
+	section
+		&.product
+			h1
+				font-size: 29px
+				line-height: 34px
+			.color_choices
+				text-align: center
+			.compare_block
+				text-align: center
+				margin-bottom: 20px
+				.discount
+					margin-top: 20px
+			.price_block
+				text-align: center
+			.price_wrap
+				margin-top: 20px
+				.old_price
+					position: static
+					font-size: 19px
+				.price
+					font-size: 32px
+
+
+	.prod_item
+		img
+			width: auto
+
+	section
+		&.sec_product_descr
+			padding: 40px 0
+			font-size: 16px
+
+	section
+		&.category
+			.category_item
+				height: 297px
+				header
+					bottom: 24px
+					h1
+						font-size: 18px
+				&.horizontal
+					height: 145px
+					header
+						top: 51px
+						right: 10px
+						padding: 0
+						width: 50%
+						h1
+							margin: 0
+				&.vertical
+					height: 609px
+					header
+						bottom: 40px
+	section
+		&.content
+			padding: 30px 0
+			.sec_title
+				font-size: 28px
+				line-height: 33px
+				margin-bottom: 20px
+			p
+				text-align: justify
+				padding: 0 15px
+			.btn
+				margin-top: 5px
+	section
+		&.subscribe
+			padding: 50px 0
+			.sec_title
+				text-align: center
+			.sec_desc
+				text-align: center
+				margin: 0 0 20px 0
+			.subscribe_form
+				margin: 0 0 20px 0
+			.social_link
+				a
+					margin: 0 5px
+	section
+		&.payment_method
+			background-image: url("../img/mobile_screen/pay_method_bg.png")
+			height: auto
+			background-position: 0 0
+			background-color: #E9E9E9
+			padding-bottom: 30px
+			.payment
+				border: 7px solid $accent
+				border-radius: 10px
+				padding: 10px
+				margin-top: 278px
+				.sec_title
+					margin: 10px 0 5px 0
+				.pay_icon_set
+					width: 100%
+				.btn_lite
+					margin-top: 10px 0 10px 0
+	section
+		&.delivery_info
+			background-image: url("../img/mobile_screen/del_method_bg.png")
+			height: auto
+			background-color: #D9641E
+			background-position: top
+			padding-bottom: 0
+			.delivery
+				border: 7px solid #fff
+				border-radius: 10px
+				padding: 10px
+				margin-top: 256px
+				.sec_title
+					margin: 10px 0 5px 0
+				.pay_icon_set
+					width: 100%
+				.btn_lite
+					margin-top: 10px 0 10px 0
+	section
+		&.service_info
+			background-image: url("../img/mobile_screen/service_bg.png")
+			background-position: bottom
+			.service
+				border: 7px solid #4828A8
+				border-radius: 10px
+				padding: 10px
+				margin-top: 95px
+				.sec_title
+					margin: 10px 0 5px 0
+				.pay_icon_set
+					width: 100%
+				.btn_lite
+					margin-top: 10px 0 10px 0
+	footer
+		&.homepage
+			padding:
+			.top_footer
+				text-align: center
+				padding: 30px 0
+				.foot_logo
+					margin-bottom: 10px
+					img
+						width: 100%
+			.bottom_footer
+				img
+					width: 100%
+	#toTop
+		width: 40px
+		height: 40px
+		padding-top: 6px
+		&.active
+			right: 10px
+			bottom: 10px
+		i
+			font-size: 26px
+
+	section
+		&.product_engine
+			padding: 40px 0
+			background: #000000
+			.content ul li
+				width: 90px
+				height: 140px
+
+	section
+		&.braking_system
+			padding: 40px 0
+			background: $accent
+			.content
+				margin-top: 0
+			table
+				font-size: 12px
+
+	section
+		&.weight_size
+			padding: 40px 0
+			background: #fff
+			.content ul li
+				width: 117px
+
+	section
+		&.outfit
+			padding: 40px 0
+
+	section
+		&.specifications
+			padding: 40px 0
+			.sec_title
+				margin-bottom: 15px
+			table
+				margin-bottom: 20px
+				font-size: 12px
+				img
+					width: 30px
+
+	section
+		&.catalog
+			h1
+				font-size: 29px
+				line-height: 34px
+			.tags
+				margin-bottom: 15px
+				overflow: hidden
+				a
+					margin-bottom: 10px
+					float: left
+			.filtr_btn
+				margin-top: 15px
+
+	section
+		&.popular_prod
+			.sec_title
+				font-size: 22px
+				text-align: center
+
+	.cart_item
+		text-align: center
+		img
+			width: 50%
+
+	section
+		&.ordering
+			form
+				label
+					text-align: center
+					margin-left: 0
+				.label
+					text-align: center
+					margin-bottom: 20px
+				.city_btn
+					width: 237px
+					display: block
+					margin: 50px auto 0 auto
+				.delivery
+					label
+						.btn
+							margin: 0 auto
+							display: block
+
+	.datatime_list
+		li
+			float: none!important
+			display: block
+			text-align: center
+			width: 100%!important
+			input
+				display: block
+				margin: 0 auto
+
+	.table_order
+		font-size: 10px
+		ul
+			.order_info
+				font-size: 14px
+				.prod_info_item
+					text-align: center
+					padding: 20px 0
+					img
+						width: 50%
+						float: none
+						margin-right: 0
+					.prod_title
+						float: none
+					.price
+						padding-top: 10px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

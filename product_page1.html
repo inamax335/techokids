@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Страница товара</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <style>body { opacity: 0; overflow-x: hidden;  } html { background-color: #fff; }</style>
+
+</head>
+
+<body class="nohome">
+  <div id="my-page">
+    <a href="#my_menu" class="mmenu_btn"><i class="fa fa-cog"></i> Страницы</a>
+    <nav id="my_menu">
+       <ul>
+          <li class="completed"><a href="index.html">Главная</a></li>
+          <li class="completed"><a href="dostavka.html">Доставка</a></li>
+          <li class="completed"><a href="garant_servis.html">Гарантия и сервис</a></li>
+          <li class="completed"><a href="contacts.html">Контакты</a></li>
+          <li class="completed"><a href="cart.html">Корзина</a></li>
+          <li class="completed"><a href="cart2.html">Корзина 2</a></li>
+          <li class="completed"><a href="katalog.html">Товары</a></li>
+          <li class="completed"><a href="lk1.html">ЛК 1</a></li>
+          <li class="completed"><a href="lk2.html">ЛК 2</a></li>
+          <li class="completed"><a href="lk3.html">ЛК 3</a></li>
+          <li class="completed"><a href="lk4.html">ЛК 4</a></li>
+          <li class="completed"><a href="index.html">ЛК Вход</a></li>
+          <li class="completed"><a href="oplata.html">Оплата</a></li>
+          <li class="active completed"><a href="#">Страница товара</a></li>
+          <li class="completed"><a href="product_page2.html">Страница товара 2</a></li>
+          <li class="completed"><a href="text.html">Страница контента</a></li>
+       </ul>
+    </nav>
+    <nav id="mobile_menu">
+       <ul>
+          <li><a href="#"><img src="img/menu_icons/menu_icon1.png" alt="квадроциклы">квадроциклы</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon2.png" alt="картинги">картинги</a></li>
+          <li class="active"><a href="#"><img src="img/menu_icons/menu_icon3.png" alt="мотоциклы">мотоциклы</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon4.png" alt="">дрифт боты</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon5.png" alt="самокаты">самокаты</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon6.png" alt="ролики">ролики</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon7.png" alt="скетборды">скетборды</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon8.png" alt="запчасти">запчасти</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon9.png" alt="экипировка">экипировка</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon10.png" alt="еще">еще..></a></li>
+          <!-- <li class="sale"><a href="#"><img src="img/menu_icons/menu_icon11.png" alt="акции">акции</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon12.png" alt="избранное">избранное</a></li>
+          <li><a href="#"><span class="cart_count">3</span><img src="img/menu_icons/menu_icon13.png" alt="корзина">корзина</a></li> -->
+        </ul>
+    </nav>
+    <header class="main_header">
+      <div class="top_bar">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                <ul class="top_menu">
+                  <li><a href="#">О магазине</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">Гарантия и сервис</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-2">
+                <div class="delivery">
+                  <a href="#" class="dostavka_link"><i class="icon dostavka"></i>Отследить доставку</a>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="check_gorod">
+                  <span><i class="icon gorod"></i> город:</span><select name="Город" id="name_city">
+                    <option value="Cанкт-Петербург">Cанкт-Петербург</option>
+                    <option value="Москва">Москва</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="lk">
+                  <i class="icon user"></i><span>кабинет:</span><a href="#sign_in" class="sign_in popup-with-zoom-anim">Вход</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="logo_line">
+              <div class="col-lg-3 col-lg-offset-1">
+                <div class="brand">
+                  <a href="/">
+                    <img src="img/logo.png" alt="Технодети.рф">
+                    <span class="slogan">дискаунтер детского транспорта</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3">
+                <div class="search">
+                  <form>
+                    <div class="input_group">
+                      <input type="text">
+                      <button class="btn_search"><i class="icon search_icon"></i></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="header_phone">
+                  <div>
+                    <a href="tel:89149714177" class="phone">
+                      <i class="icon phone_icon"></i>
+                      8 914-971-41-77
+                    </a>
+                  </div>
+                  <a href="#form_callback" class="callback popup-with-zoom-anim">обратный звонок</a>
+                </div>
+
+              </div>
+              <div class="col-lg-1"></div>
+            </div>
+        </div>
+      </div>
+    </header>
+    <nav class="main_menu">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="menu_desktop hidden-xs hidden-sm">
+              <li><a href="#"><img src="img/menu_icons/menu_icon1.png" alt="квадроциклы">квадроциклы</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon2.png" alt="картинги">картинги</a></li>
+              <li class="active"><a href="#"><img src="img/menu_icons/menu_icon3.png" alt="мотоциклы">мотоциклы</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon4.png" alt="">дрифт боты</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon5.png" alt="самокаты">самокаты</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon6.png" alt="ролики">ролики</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon7.png" alt="скетборды">скетборды</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon8.png" alt="запчасти">запчасти</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon9.png" alt="экипировка">экипировка</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon10.png" alt="еще">еще..></a></li>
+              <li class="sale"><a href="#"><img src="img/menu_icons/menu_icon11.png" alt="акции">акции</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon12.png" alt="избранное">избранное</a></li>
+              <li><a href="#"><span class="cart_count">3</span><img src="img/menu_icons/menu_icon13.png" alt="корзина">корзина</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mob_nav hidden-lg hidden-md">
+          <a href="#mobile_menu" class="toggle-mnu "><span></span></a>
+          <ul class="mob_nav_list">
+            <li><a href="#" title="Избранные товары"><img src="img/menu_icons/menu_icon12.png" alt="избранное"></a></li>
+            <li><a href="#" title="Корзина товаров"><span class="cart_count">3</span><img src="img/menu_icons/menu_icon13.png" alt="корзина"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <ul>
+                <li><a href="">Главная</a></li>
+                <li><a href="">Каталог</a></li>
+                <li><a href="">Квадроциклы</a></li>
+                <li class="active">GT 125</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>Квадроцикл GT 125</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="product_slider">
+              <div class="owl-carousel product_images">
+                <img src="img/product_images/IMG_2.jpg" alt="Квадроцикл GT 125">
+                <img src="img/product_images/IMG_1.jpg" alt="Квадроцикл GT 125">
+                <img src="img/product_images/IMG_3.jpg" alt="Квадроцикл GT 125">
+              </div>
+              <div class="owl-nav-castom">
+                <span class="customPrevBtn"><i class="fa fa-angle-left"></i></span>
+                <span class="customNextBtn"><i class="fa fa-angle-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="color_choices">
+              <span class="color">ЦВЕТ:</span>
+                <div>
+                  <input id="color_1" name="color" type="radio"/>
+                  <label for="color_1"></label>
+                </div>
+
+                <div>
+                  <input id="color_2" name="color" type="radio"/>
+                  <label for="color_2"></label>
+                </div>
+
+                <div>
+                  <input id="color_3" name="color" type="radio"/>
+                  <label for="color_3"></label>
+                </div>
+                <div>
+                  <input id="color_4" name="color" type="radio" checked />
+                  <label for="color_4"></label>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="compare_block">
+              <a href="#" class="btn compare btn_tran">Добавить к сравнению</a>
+              <span class="discount">-20%</span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="price_block">
+                <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+                <a href="#" class="btn buy_now"><i class="fa fa-shopping-cart"></i> в корзину</a>
+                <div class="price_wrap">
+                  <span class="old_price">77 000 р.</span>
+                  <span class="price">67 000 р.</span>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec_product_descr" style="background-image: url(img/product_descr_bg.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="product_descr">
+              <h2 class="sec_title">описание квадроцикла</h2>
+              <p>Инженеры BRP создали новый мотовездеход Can-Am MAVERICK X3 с использованием целой серии передовых конструктивных решений, сразу выдвинувших X3 на пьедестал почета среди мировой мототехники! Каждая часть SSV работает на достижение наилучшего результата.
+              </p>
+              <p>
+Гордость Can Am MAVERICK X3 — турбированный трехцилиндровый мотор ROTAX 900ACE с системой электронного управления дросселем iTC и великолепной системой охлаждения. Мощность мотора — 154 лошадиные силы при 7500 об/минуту и невероятное ускорение! Бензобак - 40 литров.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product_gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="controls">
+              <button class="filter" data-filter="all">Все фото</button>
+              <button class="filter" data-filter=".category-1">Подробные фото</button>
+              <button class="filter" data-filter=".category-2">Фото LIVE</button>
+              <button class="filter" data-filter=".category-3">Видео LIVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Container" class="container_gall">
+
+          <div class="mix category-1" data-myorder="1">
+            <img class="" src="img/product_images/IMG_15.jpg" alt="Alt" style="width: 100%;">
+          </div>
+
+          <div class="mix category-2" data-myorder="2">
+            <img class="" src="img/product_images/IMG_16.jpg" alt="Alt" style="width: 100%;">
+          </div>
+
+          <div class="mix category-3" data-myorder="3">
+
+          </div>
+
+      </div>
+    </section>
+    <section class="product_engine">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="content">
+              <h2 class="sec_title">мощный Двигатель</h2>
+              <p>Гордость Can Am MAVERICK X3 — турбированный трехцилиндровый мотор ROTAX 900ACE с системой электронного управления дросселем iTC и великолепной системой охлаждения. Мощность мотора — 154 лошадиные силы при 7500 об/минуту и невероятное ускорение! Бензобак - 40 литров.
+              </p>
+              <ul>
+                <li>
+                  <img src="img/engine_icon1.png" alt="Alt">
+                  <span>9 Л.С</span>
+                  <p>Мощность двигателя</p>
+                </li>
+                <li>
+                  <img src="img/engine_icon2.png" alt="Alt">
+                  <span>65 км/ч</span>
+                  <p>Макс. скорость</p>
+                </li>
+                <li>
+                  <img src="img/engine_icon3.png" alt="Alt">
+                  <span>124 см.куб</span>
+                  <p>Объем двигателя</p>
+                </li>
+                <li>
+                  <img src="img/engine_icon4.png" alt="Alt">
+                  <span>4-х тактный</span>
+                  <p>Тип двигателя</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+    </section>
+    <section class="braking_system">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-lg-offset-3">
+            <div class="content">
+              <h2 class="sec_title">шасси и тормозная система</h2>
+              <p>Гордость Can Am MAVERICK X3 — турбированный трехцилиндровый мотор ROTAX 900ACE с системой электронного управления дросселем iTC и великолепной системой охлаждения. Мощность мотора — 154 лошадиные силы при 7500 об/минуту и невероятное ускорение! Бензобак - 40 литров.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-9 col-lg-offset-2">
+            <table style="width:100%">
+                <tr>
+                  <th><i class="fa fa-circle"></i> Колеса:</th>
+                  <th><span>Maxxis Bighorn 2.0 (73,7 x 22,9 x 35,6 см)</span></th>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-circle"></i> Тормозной механизм:</td>
+                  <td><span>FOX 2.5 PODIUM RC2 с выносным резервуаром и регулировкой демпфирования сжатия и отбоя</span></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-circle"></i> Тип подвески:</td>
+                  <td><span>Четыре маятниковых рычага X-типа (TTX) со стабилизатором поперечной устойчивости</span></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-circle"></i> Ход подвески:</td>
+                  <td><span>508 мм</span></td>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="weight_size">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6">
+            <div class="content">
+              <h2 class="sec_title">вес и размеры</h2>
+              <p>Трехскоростная коробка передач с автоматическим сцеплением и задним ходом. Задняя ось на усиленных подшипниках.
+Износоустойчивые барабанные передние тормоза и мощный гидравлический дисковый задний тормоз с перфорацией.
+              </p>
+              <ul>
+                <li>
+                  <img src="img/weight_size_icon1.png" alt="Alt">
+                  <span>100 кг</span>
+                  <p>Макс. нагрузка</p>
+                </li>
+                <li>
+                  <img src="img/weight_size_icon2.png" alt="Alt">
+                  <span>97,6 кг</span>
+                  <p>Вес квадроцикла</p>
+                </li>
+                <li>
+                  <img src="img/weight_size_icon3.png" alt="Alt">
+                  <span>356 мм</span>
+                  <p>Клиренс</p>
+                </li>
+                <li>
+                  <img src="img/weight_size_icon4.png" alt="Alt">
+                  <span>140 см</span>
+                  <p>Длина</p>
+                </li>
+                <li>
+                  <img src="img/weight_size_icon5.png" alt="Alt">
+                  <span>90 см</span>
+                  <p>Ширина</p>
+                </li>
+                <li>
+                  <img src="img/weight_size_icon6.png" alt="Alt">
+                  <span>98 см</span>
+                  <p>Высота</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="outfit">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <h2 class="sec_title">Комплектация и аксессуары</h2>
+            <div class="content">
+                <div class="owl-carousel outfit_slider">
+                  <div class="slide">
+                    <img src="img/outfit_slide1.png" alt="Alt">
+                    <span>Лучший в отрасли 154-сильный двигатель Rotax ACE</span>
+                    <p>Этот рядный 4-тактный двухцилиндровый двигатель с впрыском топлива EFI является самым экономичным снегоходным двигателем из когда-либо созданных. Технология ACE (Advanced Combustion Efficiency) обеспечивает множество преимуществ</p>
+                  </div>
+                  <div class="slide">
+                    <img src="img/outfit_slide1.png" alt="Alt">
+                    <span>Лучший в отрасли 154-сильный двигатель Rotax ACE</span>
+                    <p>Этот рядный 4-тактный двухцилиндровый двигатель с впрыском топлива EFI является самым экономичным снегоходным двигателем из когда-либо созданных. Технология ACE (Advanced Combustion Efficiency) обеспечивает множество преимуществ</p>
+                  </div>
+                  <div class="slide">
+                    <img src="img/outfit_slide1.png" alt="Alt">
+                    <span>Лучший в отрасли 154-сильный двигатель Rotax ACE</span>
+                    <p>Этот рядный 4-тактный двухцилиндровый двигатель с впрыском топлива EFI является самым экономичным снегоходным двигателем из когда-либо созданных. Технология ACE (Advanced Combustion Efficiency) обеспечивает множество преимуществ</p>
+                  </div>
+                </div>
+                <div class="owl-nav">
+                    <span class="PrevBtn"><i class="fa fa-angle-left"></i></span>
+                    <span class="NextBtn"><i class="fa fa-angle-right"></i></span>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+      </div>
+    </section>
+    <section class="specifications">
+      <div class="container">
+        <div class="row">
+          <h2 class="sec_title">Технические характеристики</h2>
+          <div class="col-lg-6">
+            <table style="width:100%">
+                <tr>
+                  <th><img src="img/spec_icon1.png" alt="Alt"></th>
+                  <th><span>Двигатель</span></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Аккумулятор</td>
+                  <td>12В, 5АН</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Зажигание</td>
+                  <td>электронное (СDI)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Запуск двигателя</td>
+                  <td>электростартер</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Кол-во цилиндров</td>
+                  <td>1-цилиндровый</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Марка топлива</td>
+                  <td>АИ-92</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Материал топливного бака</td>
+                  <td>металический</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Мощность двигателя</td>
+                  <td>4,5 л.с.</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Объем двигателя</td>
+                  <td>50 см3</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Охлаждение двигателя</td>
+                  <td>воздушное</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Система подачи топлива</td>
+                  <td>карбюратор</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Число тактов</td>
+                  <td>4-х тактный</td>
+                </tr>
+              </table>
+              <table style="width:100%">
+                <tr>
+                  <th><img src="img/spec_icon2.png" alt="Alt"></th>
+                  <th><span>Трансмиссия и ходовая часть</span></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Задние шины</td>
+                  <td>7” (16*8-R7)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Передние шины</td>
+                  <td>7” (16*8-R7)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Главная передача</td>
+                  <td>Усиленная цепь 428</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Колесные диски</td>
+                  <td>метал. штамп.</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Тип привода</td>
+                  <td>цепной на зад. ось</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Трансмиссия</td>
+                  <td>авто. с реверсом</td>
+                </tr>
+              </table>
+              <table style="width:100%">
+                <tr>
+                  <th><img src="img/spec_icon3.png" alt="Alt"></th>
+                  <th><span>Габаритные размеры</span></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Длина упаковки</td>
+                  <td>1300 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Ширина упаковки</td>
+                  <td>770 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Высота упаковки</td>
+                  <td>620 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Масса в упаковке</td>
+                  <td>115 кг</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Длина</td>
+                  <td>1550 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Ширина</td>
+                  <td>990 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Высота</td>
+                  <td>980 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Сухая масса</td>
+                  <td>94 кг</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Высота по седлу</td>
+                  <td>610 мм</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Дорожный просвет</td>
+                  <td>105 мм</td>
+                </tr>
+              </table>
+          </div>
+          <div class="col-lg-6">
+            <table style="width:100%">
+              <tr>
+                <th><img src="img/spec_icon3.png" alt="Alt"></th>
+                <th><span>Эксплуатационные характеристики</span></th>
+                <th></th>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Макс. нагрузка</td>
+                <td>150 кг</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Макс. скорость</td>
+                <td>40 км/ч</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Объем топливного бака</td>
+                <td>3,5 л</td>
+              </tr>
+            </table>
+            <table style="width:100%">
+                <tr>
+                  <th><img src="img/spec_icon4.png" alt="Alt"></th>
+                  <th><span>Тормозная система</span></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Тормоза задние</td>
+                  <td>гидравлич. дисковые</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Тормоза передние</td>
+                  <td>механич. барабанные</td>
+                </tr>
+            </table>
+            <table style="width:100%">
+                <tr>
+                  <th><img src="img/spec_icon5.png" alt="Alt"></th>
+                  <th><span>подвеска</span></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Задние амортизаторы</td>
+                  <td>регулируемые</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Передние амортизаторы</td>
+                  <td>регулируемые (стандарт)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Подвеска задняя</td>
+                  <td>маятниковая с моно амортиз.</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Подвеска передняя</td>
+                  <td>независимая 2-х рычажная</td>
+                </tr>
+              </table>
+              <table style="width:100%">
+                <tr>
+                  <th><img src="img/spec_icon6.png" alt="Alt"></th>
+                  <th><span>комплектация</span></th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Автозапуск с контролем</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Защита рук</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Звуковой сигнал (клаксон)</td>
+                  <td>нет</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Зеркала заднего вида</td>
+                  <td>нет</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Колеса 7” на внедорож. резине</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Ограничитель скорости</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Передние гидравлич. тормоза</td>
+                  <td>нет</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Передние и задние повортники</td>
+                  <td>нет</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Передний отбойник</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Расширители колесных арок</td>
+                  <td>нет</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Счетчик моточасов</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Гнездо прикуривателя</td>
+                  <td>нет</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Задний багажник</td>
+                  <td>есть</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>Задний стоп-сигнал</td>
+                  <td>есть</td>
+                </tr>
+              </table>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text_center">
+            <a href="#" class="btn">Добавить товар к сравнению</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages advantages_nohome">
+      <div class="container">
+        <div class="adv_baner">
+          <div class="row">
+              <div class="col-lg-2 hidden-xs">
+                <img class="adv_boy" src="img/boy.png" alt="Boy">
+              </div>
+          <div class="col-lg-10">
+            <div class="adv_wrapper">
+              <div class="col-lg-4">
+                <div class="adv_items low_title">
+                  <a href="#">
+                    <img src="img/adv_icons/icon1.png" alt="Купить в кредит">
+                    <h2>Гарантия и сервис</h2>
+                    <p class="desc">Периодическое техническое обслуживание транспортного средства</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="adv_items">
+                  <a href="#">
+                    <img src="img/adv_icons/icon2.png" alt="Купить в кредит">
+                    <h2>доставкА</h2>
+                    <p class="desc">Доставка ЕМС Почта России. Место доставки: до вашего почтового отделения или до дверей. </p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="adv_items low_title">
+                  <a href="#">
+                    <img src="img/adv_icons/icon3.png" alt="тест-драйв">
+                    <h2>способы оплаты</h2>
+                    <p class="desc">Способ оплаты любого заказа Вы выбираете при его оформлении.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="sec_title">похожие товары</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item1.png" alt="Alt">
+                <h1 class="prod_title">GT EL1000</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item2.png" alt="Alt">
+                <h1 class="prod_title">GT EL1000</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item3.png" alt="Alt">
+                <h1 class="prod_title">GT EL1000</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <span class="discount">-20%</span>
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item4.png" alt="Alt">
+                <h1 class="prod_title">GT EL1000</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="sec_title">С этим товаром также покупают</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item5.png" alt="Alt">
+                <h1 class="prod_title">Колесо maiqilin
+21х7-10 левое</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item6.png" alt="Alt">
+                <h1 class="prod_title">Modeka Kid´s Sommer</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item7.png" alt="Alt">
+                <h1 class="prod_title">GT EL1000</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="prod_item">
+              <span class="discount">-20%</span>
+              <i class="fa fa-star add_fav" title="Добавить в избранное"></i>
+              <a href="#">
+                <img src="img/product_items/prod_item8.png" alt="Alt">
+                <h1 class="prod_title">GT EL1000</h1>
+                <p class="prod_desc">Чтобы купить необходимую вещь по доступной цене</p>
+                <span class="prod_line"></span>
+                <span class="old_price">77 000 р.</span>
+                <span class="price">67 000 р.</span>
+              </a>
+            </article>
+          </div>
+        </div>
+        </div>
+    </section>
+    <section class="subscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h3 class="sec_title">ПОДПИШИТЕСЬ на новости</h3>
+            <p class="sec_desc">Получайте информацию о новых акциях и скидках!</p>
+          </div>
+          <div class="col-lg-4">
+            <form class="subscribe_form">
+              <div class="input_group">
+                <input type="text" placeholder="Введите свой e-mail">
+                <button class="btn_subscribe" title="Отправить"><i class="icon subscribe_icon"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="social_link">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-vk"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="homepage">
+      <div class="top_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <a href="" class="foot_logo">
+                <img src="img/footer_logo.png" alt="Технодети">
+              </a>
+              <div class="card_info">
+                Принимаем к оплате <br>
+                <img src="img/vis_mastecard_icon.png" alt="Visa">
+              </div>
+              <div class="copyright">
+                © 2017 технодети.рф
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <h3 class="foot_title">магизин</h3>
+              <ul>
+                <li><a href="#">О магазине</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия и сервис</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <h3 class="foot_title">кабинет</h3>
+              <ul>
+                <li><a href="#">Войти в кабинет</a></li>
+                <li><a href="#">Создать учетную запись</a></li>
+                <li><a href="#">Заказы</a></li>
+                <li><a href="#">Избранное</a></li>
+                <li><a href="#">Отписаться от новостей</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-lg-push-1">
+              <div class="footer_phone">
+                <a href="tel:89149714177">+7 914 971-41-77</a>
+              </div>
+              <div class="footer_mail">
+                <a href="mailto:info@technodeti.ru">info@technodeti.ru</a>
+              </div>
+              <div class="footer_soc_link">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-vk"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+              <div class="footer_time">
+                График работы: <br>
+                с 9:00 до 20:00 <br>
+                воскресенье до 19:00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <img src="img/footer_img.png" alt="Alt">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="forms">
+      <form id="form_callback" class="form_callback zoom-anim-dialog mfp-hide">
+        <h3>Обратный звонок</h3>
+        <div class="input_group">
+          <input type="tel" placeholder="Введите телефон" required>
+        </div>
+        <br>
+        <button class="btn">Заказать звонок</button>
+      </form>
+      <div id="sign_in" class="sign_in_form zoom-anim-dialog mfp-hide">
+        <h3>Вход в кабинет</h3>
+        <form class="sign">
+          <div class="input_group">
+            <input type="text" placeholder="Email / телефон" required>
+            <input type="password" placeholder="Пароль" required>
+          </div>
+          <a href="#" class="restoring">Забыли пароль?</a>
+          <button class="btn">войти</button>
+        </form>
+        <div class="social_sign">
+          <h4>Аторизация через соц. сети</h4>
+          <a href="#" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" rel="nofollow" class="vk"><i class="fa fa-vk"></i></a>
+          <a href="#" rel="nofollow" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <form id="registration">
+          <h4>Еще нет аккаунта?</h4>
+          <div class="input_group">
+            <input type="text" placeholder="Email / телефон" required>
+            <input type="password" placeholder="Пароль" required>
+          </div>
+          <button class="btn">Получить аккаунт</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <!-- End my-page -->
+  <a id="toTop" title="Наверх"><i class="fa fa-angle-up"></i></a>
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="js/scripts.min.js"></script>
+
+</body>
+</html>

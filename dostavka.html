@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Доставка</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <style>body { opacity: 0; overflow-x: hidden;  } html { background-color: #fff; }</style>
+
+</head>
+
+<body class="nohome">
+  <div id="my-page">
+    <a href="#my_menu" class="mmenu_btn"><i class="fa fa-cog"></i> Страницы</a>
+    <nav id="my_menu">
+       <ul>
+          <li class="completed"><a href="index.html">Главная</a></li>
+          <li class="active completed"><a href="#">Доставка</a></li>
+          <li class="completed"><a href="garant_servis.html">Гарантия и сервис</a></li>
+          <li class="completed"><a href="contacts.html">Контакты</a></li>
+          <li class="completed"><a href="cart.html">Корзина</a></li>
+          <li class="completed"><a href="cart2.html">Корзина 2</a></li>
+          <li class="completed"><a href="katalog.html">Товары</a></li>
+          <li class="completed"><a href="lk1.html">ЛК 1</a></li>
+          <li class="completed"><a href="lk2.html">ЛК 2</a></li>
+          <li class="completed"><a href="lk3.html">ЛК 3</a></li>
+          <li class="completed"><a href="lk4.html">ЛК 4</a></li>
+          <li class="completed"><a href="index.html">ЛК Вход</a></li>
+          <li class="completed"><a href="oplata.html">Оплата</a></li>
+          <li class="completed"><a href="product_page1.html">Страница товара</a></li>
+          <li class="completed"><a href="#">Страница товара 2</a></li>
+          <li class="completed"><a href="text.html">Страница контента</a></li>
+       </ul>
+    </nav>
+    <nav id="mobile_menu">
+       <ul>
+          <li><a href="#"><img src="img/menu_icons/menu_icon1.png" alt="квадроциклы">квадроциклы</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon2.png" alt="картинги">картинги</a></li>
+          <li class="active"><a href="#"><img src="img/menu_icons/menu_icon3.png" alt="мотоциклы">мотоциклы</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon4.png" alt="">дрифт боты</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon5.png" alt="самокаты">самокаты</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon6.png" alt="ролики">ролики</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon7.png" alt="скетборды">скетборды</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon8.png" alt="запчасти">запчасти</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon9.png" alt="экипировка">экипировка</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon10.png" alt="еще">еще..></a></li>
+          <!-- <li class="sale"><a href="#"><img src="img/menu_icons/menu_icon11.png" alt="акции">акции</a></li>
+          <li><a href="#"><img src="img/menu_icons/menu_icon12.png" alt="избранное">избранное</a></li>
+          <li><a href="#"><span class="cart_count">3</span><img src="img/menu_icons/menu_icon13.png" alt="корзина">корзина</a></li> -->
+        </ul>
+    </nav>
+    <header class="main_header">
+      <div class="top_bar">
+        <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                <ul class="top_menu">
+                  <li><a href="#">О магазине</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">Гарантия и сервис</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-2">
+                <div class="delivery">
+                  <a href="#" class="dostavka_link"><i class="icon dostavka"></i>Отследить доставку</a>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="check_gorod">
+                  <span><i class="icon gorod"></i> город:</span><select name="Город" id="name_city">
+                    <option value="Cанкт-Петербург">Cанкт-Петербург</option>
+                    <option value="Москва">Москва</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-2">
+                <div class="lk">
+                  <i class="icon user"></i><span>кабинет:</span><a href="#sign_in" class="sign_in popup-with-zoom-anim">Вход</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="logo_line">
+              <div class="col-lg-3 col-lg-offset-1">
+                <div class="brand">
+                  <a href="/">
+                    <img src="img/logo.png" alt="Технодети.рф">
+                    <span class="slogan">дискаунтер детского транспорта</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3">
+                <div class="search">
+                  <form>
+                    <div class="input_group">
+                      <input type="text">
+                      <button class="btn_search"><i class="icon search_icon"></i></button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="header_phone">
+                  <div>
+                    <a href="tel:89149714177" class="phone">
+                      <i class="icon phone_icon"></i>
+                      8 914-971-41-77
+                    </a>
+                  </div>
+                  <a href="#form_callback" class="callback popup-with-zoom-anim">обратный звонок</a>
+                </div>
+
+              </div>
+              <div class="col-lg-1"></div>
+            </div>
+        </div>
+      </div>
+    </header>
+    <nav class="main_menu">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="menu_desktop hidden-xs hidden-sm">
+              <li><a href="#"><img src="img/menu_icons/menu_icon1.png" alt="квадроциклы">квадроциклы</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon2.png" alt="картинги">картинги</a></li>
+              <li class="active"><a href="#"><img src="img/menu_icons/menu_icon3.png" alt="мотоциклы">мотоциклы</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon4.png" alt="">дрифт боты</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon5.png" alt="самокаты">самокаты</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon6.png" alt="ролики">ролики</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon7.png" alt="скетборды">скетборды</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon8.png" alt="запчасти">запчасти</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon9.png" alt="экипировка">экипировка</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon10.png" alt="еще">еще..></a></li>
+              <li class="sale"><a href="#"><img src="img/menu_icons/menu_icon11.png" alt="акции">акции</a></li>
+              <li><a href="#"><img src="img/menu_icons/menu_icon12.png" alt="избранное">избранное</a></li>
+              <li><a href="#"><span class="cart_count">3</span><img src="img/menu_icons/menu_icon13.png" alt="корзина">корзина</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mob_nav hidden-lg hidden-md">
+          <a href="#mobile_menu" class="toggle-mnu "><span></span></a>
+          <ul class="mob_nav_list">
+            <li><a href="#" title="Избранные товары"><img src="img/menu_icons/menu_icon12.png" alt="избранное"></a></li>
+            <li><a href="#" title="Корзина товаров"><span class="cart_count">3</span><img src="img/menu_icons/menu_icon13.png" alt="корзина"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+              <ul>
+                <li><a href="">Главная</a></li>
+                <li class="active">Доставка</li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </section>
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1>доставка</h1>
+          </div>
+          <div class="col-lg-12">
+            <div class="content">
+
+              <h2>Доставка курьером</h2>
+              <p style="font-size: 18px;">Стоимость доставки по Санкт-Петербургу из нашего магазина <span>от 0 до 500 руб.</span></p>
+              <p>Товары могут быть доставлены в день заказа, в случае если заказ оформлен до 14:00, при оформлении после 14:00 товар будет доставлен на следующий день.
+Обращаем Ваше внимание на то, что никаких дополнительных доплат за доставку товара в день обращения производить не нужно! Доставка оплачивается в любом случае, даже в случае отказа от покупки. При сумме покупки от 100 000 рублей доставка в пределах КАД бесплатная! </p>
+              <p style="font-size: 18px;">Стоимость доставки по Ленинградской области из нашего магазина <span>500 руб.</span> в пределах 5км от КАД.</p>
+              <p>Более 5 км. от КАД каждый км. фактического пути + 20 рублей к стоимости доставки. Точную стоимость доставки в ваш город уточняйте у менеджера при подтверждении заказа. Свыше 30 км. от КАД заказы отправляются только по предоплате.   </p>
+            <div class="col-lg-12">
+              <h3>ВРЕМЯ ДОСТАВКИ</h3>
+              <p>Время доставки согласовывается с менеджером службы доставки, который обязательно свяжется с вами сразу после того, как вы разместите свой заказ.
+<b>ВНИМАНИЕ!</b> Неправильно указанный номер телефона, неточный или неполный адрес могут привести к дополнительной задержке! Пожалуйста, внимательно проверяйте ваши персональные данные при регистрации и оформлении заказа. Мы гарантируем конфиденциальность ваших регистрационных данных.
+<span>Доставка выполняется ежедневно с 10:00 до 21:00 часов. На данный момент у нас 2 интервала доставки: с 10 до 18.00 и с 15.00 до 21.00</span></p>
+              <h3>Подъем крупногабаритных товаров при отсутствии лифта</h3>
+              <ul>
+                <li>До 15 кг - 100руб./этаж</li>
+                <li>От 15 кг до 20 кг - 200руб./этаж</li>
+                <li>Свыше 20 кг - 500руб./этаж</li>
+              </ul>
+              <h3>место ДОСТАВКИ</h3>
+              <p>Доставка осуществляется по адресу, указанному при оформлении заказа. Если необходимо доставить товар по иному адресу, необходимо сообщить адрес менеджеру Службы доставки, который свяжется с вами непосредственно после оформления заказа на сайте.</p>
+            </div>
+
+            <hr>
+
+            <h2>ДОСТАВКА В ГОРОДА РФ, КРОМЕ СПБ И ЛЕН.ОБЛ.</h2>
+            <p style="font-size: 18px;">Стоимость доставки в города РФ расчитывается индивидуально для каждого заказа.</p>
+            <p>Осуществляется курьерской компанией в ближайшие к вашему адресу пункты выдачи заказов. Варианты доставки в ваш город, сроки и стоимость будут предложены в корзине во время оформления заказа. При выборе доставки транспортной компанией расчет стоимости произведет менеджер при подтверждении заказа. Ориентировочную стоимость можно так же рассчитать на сайте <a target="_blank" rel="nofollow" href="http://www.dellin.ru">www.dellin.ru</a></p>
+            <hr>
+            <h2>самовывоз</h2>
+            <p style="font-size: 18px;">Бесплатный самовывоз возможен на следующий день после оформления заказа и после подтверждения заказа оператором.</p>
+            <p><b>Адрес пункта самовывоза г. Санкт-Петербург, ул. Сабировская 50, офис 111. Работает до 20:00</b>
+Так же мы работаем с курьерской компанией IML и можем доставить товар до ближайшего к вам пункта самовывоза <a href="www.delivery.ru" rel="nofolow" target="_blank">www.delivery.ru.</a> Точная стоимость и срок доставки до выбранного вами пункта будет рассчитана в корзине при оформлении заказа. Самовывоз из пунктов выдачи IML, при стоимости товаров свыше 10 000 рублей, возможен только после 100% предоплаты на сайте.  О возможности оплаты таких товаров наличными, уточняйте у операторов <a href="tel:88001234567">8-800-123-45-67</a></p>
+            <h2>ПРАВИЛА</h2>
+            <p style="font-size: 18px;">При доставке вам будут переданы все необходимые документы на покупку: товарный, кассовый чеки, а также гарантийный талон.</p>
+            <p>При оформлении покупки на организацию, вам будут переданы счет-фактура, а также накладная, в которой необходимо поставить печать вашей организации.Цена, указанная в переданных вам курьером документах, является окончательной, курьер не обладает правом корректировки цены. Стоимость доставки выделяется в документах на покупку отдельной графой.
+            </p>
+            <p><b>ВНИМАНИЕ!</b> Просим вас помнить, что все технические параметры и потребительские свойства приобретаемого товара вам следует уточнять у нашего менеджера до момента покупки товара. В обязанности работников Службы доставки не входит осуществление консультаций и комментариев относительно потребительских свойств товара. При необходимости инсталляции приобретаемого в нашем магазине товара вам необходимо сообщить об этом нашему менеджеру. При доставке вам заказанного товара проверяйте комплектность доставленного товара, работоспособность товара, соответствие доставленного товара описанию на нашем сайте, также проверьте товар на наличие механических повреждений. При не заявлении вами при получении товара претензий по поводу механических повреждений, в дальнейшем подобные претензии не рассматриваются. </p>
+            <br>
+            <footer>
+              <h5>ПО ВСЕМ ВОПРОСАМ, предложениям и претензиям
+о ДОСТАВКе, звоните: 8 800 123-45-67</h5>
+<span>Телефон службы доставки (многоканальный).</span>
+            </footer>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section class="subscribe">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h3 class="sec_title">ПОДПИШИТЕСЬ на новости</h3>
+            <p class="sec_desc">Получайте информацию о новых акциях и скидках!</p>
+          </div>
+          <div class="col-lg-4">
+            <form class="subscribe_form">
+              <div class="input_group">
+                <input type="text" placeholder="Введите свой e-mail">
+                <button class="btn_subscribe" title="Отправить"><i class="icon subscribe_icon"></i></button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="social_link">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-vk"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="homepage">
+      <div class="top_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <a href="" class="foot_logo">
+                <img src="img/footer_logo.png" alt="Технодети">
+              </a>
+              <div class="card_info">
+                Принимаем к оплате <br>
+                <img src="img/vis_mastecard_icon.png" alt="Visa">
+              </div>
+              <div class="copyright">
+                © 2017 технодети.рф
+              </div>
+            </div>
+            <div class="col-lg-2">
+              <h3 class="foot_title">магизин</h3>
+              <ul>
+                <li><a href="#">О магазине</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Гарантия и сервис</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2">
+              <h3 class="foot_title">кабинет</h3>
+              <ul>
+                <li><a href="#">Войти в кабинет</a></li>
+                <li><a href="#">Создать учетную запись</a></li>
+                <li><a href="#">Заказы</a></li>
+                <li><a href="#">Избранное</a></li>
+                <li><a href="#">Отписаться от новостей</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-lg-push-1">
+              <div class="footer_phone">
+                <a href="tel:89149714177">+7 914 971-41-77</a>
+              </div>
+              <div class="footer_mail">
+                <a href="mailto:info@technodeti.ru">info@technodeti.ru</a>
+              </div>
+              <div class="footer_soc_link">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-vk"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-odnoklassniki"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+              </div>
+              <div class="footer_time">
+                График работы: <br>
+                с 9:00 до 20:00 <br>
+                воскресенье до 19:00
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom_footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <img src="img/footer_img.png" alt="Alt">
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="forms">
+      <form id="form_callback" class="form_callback zoom-anim-dialog mfp-hide">
+        <h3>Обратный звонок</h3>
+        <div class="input_group">
+          <input type="tel" placeholder="Введите телефон" required>
+        </div>
+        <br>
+        <button class="btn">Заказать звонок</button>
+      </form>
+      <div id="sign_in" class="sign_in_form zoom-anim-dialog mfp-hide">
+        <h3>Вход в кабинет</h3>
+        <form class="sign">
+          <div class="input_group">
+            <input type="text" placeholder="Email / телефон" required>
+            <input type="password" placeholder="Пароль" required>
+          </div>
+          <a href="#" class="restoring">Забыли пароль?</a>
+          <button class="btn">войти</button>
+        </form>
+        <div class="social_sign">
+          <h4>Аторизация через соц. сети</h4>
+          <a href="#" rel="nofollow" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" rel="nofollow" class="vk"><i class="fa fa-vk"></i></a>
+          <a href="#" rel="nofollow" class="instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <form id="registration">
+          <h4>Еще нет аккаунта?</h4>
+          <div class="input_group">
+            <input type="text" placeholder="Email / телефон" required>
+            <input type="password" placeholder="Пароль" required>
+          </div>
+          <button class="btn">Получить аккаунт</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <!-- End my-page -->
+  <a id="toTop" title="Наверх"><i class="fa fa-angle-up"></i></a>
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="js/scripts.min.js"></script>
+
+</body>
+</html>
